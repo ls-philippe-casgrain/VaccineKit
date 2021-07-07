@@ -1,0 +1,22 @@
+# More documentation about how to customize your build
+# can be found here:
+# https://docs.fastlane.tools
+fastlane_version "2.187.0"
+
+xcodeVersion = "12.5"
+
+before_all do
+    xcversion(version: xcodeVersion)
+end
+
+default_platform :ios
+
+platform :ios do
+
+  desc "Runs all the tests"
+  lane :test do
+
+    # SwiftPM
+    sh("swift test", step_name: "Validate SwiftPM")
+  end
+end
