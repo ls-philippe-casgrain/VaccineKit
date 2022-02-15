@@ -3,7 +3,7 @@
 # https://docs.fastlane.tools
 fastlane_version "2.187.0"
 
-xcodeVersion = "12.5"
+xcodeVersion = "13.2.1"
 
 before_all do
     xcversion(version: xcodeVersion)
